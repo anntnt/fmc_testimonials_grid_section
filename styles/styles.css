@@ -1,0 +1,18 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Geist", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-optical-sizing: auto;
+  background: url("../design/desktop-design.jpg") no-repeat top center;
+  background-size: contain;
+}
+
+/*# sourceMappingURL=styles.css.map */
