@@ -95,6 +95,7 @@ a {
     justify-content: center;
     align-content: center;
     gap: 1.1rem;
+    flex-wrap: wrap;
 
     &__avatar {
         width: 30px;
@@ -137,6 +138,7 @@ a {
     &__message {
         font-size: 0.8125rem;
         color: $white;
+        width: 95%;
 
         &--purple {
             color: $purple-50 ;
@@ -146,7 +148,7 @@ a {
         background-color: $purple-500;
         background-image: url(../images/bg-pattern-quotation.svg);
         background-repeat: no-repeat;
-        background-position: 87% top;
+        background-position: 86% top;
 
     }
     &--white {
