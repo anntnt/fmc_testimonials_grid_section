@@ -89,12 +89,12 @@ a {
 .card{
     border-radius: 8px;
     box-shadow: 40px 50px 50px rgba(0, 0, 0, 0.2);
-    padding: 1.5rem ;
+    padding: 2rem 1.8rem ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    gap: 1.5rem;
+    gap: 1.1rem;
 
     &__avatar {
         width: 30px;
@@ -111,22 +111,23 @@ a {
         gap: 0.25rem;
     }
     &__name {
-        font-size: 0.9375rem;
-        font-weight: $font-weight-semibold;
+        font-size: 0.8125rem;
+        font-weight: $font-weight-medium;
+        line-height: 1rem;
 
         &--purple {
-            color: $purple-300 ;
+            color: $purple-50 ;
         }
     }
     &__status {
         font-size: 0.8125rem;
 
         &--purple {
-            color: $purple-300 ;
+            color: $purple-50 ;
         }
     }
     &__title {
-        font-size: 0.9375rem;
+        font-size: 1.25rem;
         font-weight: $font-weight-medium;
 
         &--purple {
@@ -137,11 +138,15 @@ a {
         font-size: 0.8125rem;
 
         &--purple {
-            color: $purple-300;
+            color: $purple-50 ;
         }
     }   
     &--purple {
         background-color: $purple-500;
+        background-image: url(../images/bg-pattern-quotation.svg);
+            background-repeat: no-repeat;
+            background-position: right top;
+
         color: $white;
     }
     &--white {

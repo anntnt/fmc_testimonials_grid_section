@@ -61,12 +61,12 @@ a {
 .card {
   border-radius: 8px;
   box-shadow: 40px 50px 50px rgba(0, 0, 0, 0.2);
-  padding: 1.5rem;
+  padding: 2rem 1.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 .card__avatar {
   width: 30px;
@@ -82,20 +82,21 @@ a {
   gap: 0.25rem;
 }
 .card__name {
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1rem;
 }
 .card__name--purple {
-  color: hsl(264, 82%, 80%);
+  color: hsl(260, 100%, 95%);
 }
 .card__status {
   font-size: 0.8125rem;
 }
 .card__status--purple {
-  color: hsl(264, 82%, 80%);
+  color: hsl(260, 100%, 95%);
 }
 .card__title {
-  font-size: 0.9375rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 .card__title--purple {
@@ -105,10 +106,13 @@ a {
   font-size: 0.8125rem;
 }
 .card__message--purple {
-  color: hsl(264, 82%, 80%);
+  color: hsl(260, 100%, 95%);
 }
 .card--purple {
   background-color: hsl(263, 55%, 52%);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
   color: hsl(0, 0%, 100%);
 }
 .card--white {
