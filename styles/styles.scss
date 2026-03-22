@@ -65,9 +65,10 @@ a {
 .container {
     display: grid;
     gap: 1.9rem;
-    width: 90%;
-    max-width: $container-width;
-    margin: 0 auto;
+    width: min(90%, $container-width);
+    margin-inline: auto;
+
+    grid-template-columns: 1fr;
 
 
     @include tablet {
@@ -85,6 +86,9 @@ a {
     }
 
 }
+// -----------------------------
+// CARD COMPONENT
+// -----------------------------
 
 .card{
     border-radius: 8px;
@@ -92,63 +96,56 @@ a {
     padding: 2rem 1.8rem ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     gap: 1.1rem;
-    flex-wrap: wrap;
+
+    &__header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    }
 
     &__avatar {
         width: 30px;
         height: 30px;
         border-radius: 50%;
-
-        &--purple {
-            border: 2px solid $purple-300;
-        }
     }
     &__personalinfo {
         display: flex;
         flex-direction: column;
         gap: 1px;
     }
+     // Typography
     &__name {
         font-size: 0.8125rem;
         font-weight: $font-weight-medium;
         line-height: 1rem;
-
-        &--purple {
-            color: $purple-50 ;
-        }
     }
     &__status {
         font-size: 0.7rem;
-
-        &--purple {
-            color: $purple-50 ;
-        }
     }
     &__title {
         font-size: 1.25rem;
         font-weight: $font-weight-medium;
-
-        &--purple {
-            color: $white;
-        }
     }
     &__message {
         font-size: 0.8125rem;
-        color: $white;
         width: 95%;
-
-        &--purple {
-            color: $purple-50 ;
-        }
     }   
     &--purple {
         background-color: $purple-500;
         background-image: url(../images/bg-pattern-quotation.svg);
         background-repeat: no-repeat;
         background-position: 86% top;
+
+        .card__title{
+            color: $white;
+        }
+
+        .card__name,
+        .card__status,
+        .card__message {
+            color: $purple-50;
+        }
 
     }
     &--white {
@@ -164,8 +161,4 @@ a {
         color: $white;
     }
 }
-header {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-}
+
