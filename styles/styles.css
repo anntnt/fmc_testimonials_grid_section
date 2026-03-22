@@ -36,9 +36,9 @@ a {
 
 .container {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.9rem;
   width: 90%;
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 @media screen and (min-width: 600px) {
@@ -79,7 +79,7 @@ a {
 .card__personalinfo {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 1px;
 }
 .card__name {
   font-size: 0.8125rem;
@@ -90,7 +90,7 @@ a {
   color: hsl(260, 100%, 95%);
 }
 .card__status {
-  font-size: 0.8125rem;
+  font-size: 0.7rem;
 }
 .card__status--purple {
   color: hsl(260, 100%, 95%);
@@ -104,6 +104,7 @@ a {
 }
 .card__message {
   font-size: 0.8125rem;
+  color: hsl(0, 0%, 100%);
 }
 .card__message--purple {
   color: hsl(260, 100%, 95%);
@@ -112,8 +113,7 @@ a {
   background-color: hsl(263, 55%, 52%);
   background-image: url(../images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  background-position: right top;
-  color: hsl(0, 0%, 100%);
+  background-position: 87% top;
 }
 .card--white {
   background-color: hsl(0, 0%, 100%);
@@ -126,6 +126,12 @@ a {
 .card--darkblue {
   background-color: hsl(219, 29%, 14%);
   color: hsl(0, 0%, 100%);
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
