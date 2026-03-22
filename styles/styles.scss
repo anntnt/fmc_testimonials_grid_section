@@ -1,4 +1,6 @@
 
+@use "sass:map";
+
 $purple-50: hsl(260, 100%, 95%);
 $purple-300: hsl(264, 82%, 80%);
 $purple-500: hsl(263, 55%, 52%);
@@ -29,7 +31,61 @@ $container-width: 1120px;
   }
 }
 
+// -----------------------------
+//Theme map
+// -----------------------------
 
+$card-themes: (
+  "purple": (
+    bg: $purple-500,
+    text: $purple-50,
+    title: $white,
+    image: url(../images/bg-pattern-quotation.svg),
+    avatarboder: $purple-300
+  ),
+  "white": (
+    bg: $white,
+    text: $grey-500,
+    title: $grey-500,
+    image: none,
+    avatarboder: none
+  ),
+  "darkgrey": (
+    bg: $grey-500,
+    text: $grey-200,
+    title: $grey-100,
+    image: none,
+    avatarboder: $dark-blue
+  ),
+  "darkblue": (
+    bg: $dark-blue,
+    text:$grey-200,
+    title: $grey-200,
+    image: none,
+    avatarboder: $purple-500
+  )
+);
+
+@each $name, $theme in $card-themes {
+  $bg: map.get($theme, bg);
+  $text: map.get($theme, text);
+  $title: map.get($theme, title);
+  $image: map.get($theme, image);
+  $avatarboder: map.get($theme, avatarboder);
+
+  .card--#{$name} {
+    --card-bg: #{$bg};
+    --card-text: #{$text};
+    --card-title: #{$title};
+    --card-bg-image: #{$image};
+    --card-avatar-border: #{$avatarboder};
+  }
+}
+
+
+// -----------------------------
+// GLOBAL STYLES
+// -----------------------------
 
 
 *,  *::after, *::before {
@@ -90,75 +146,58 @@ a {
 // CARD COMPONENT
 // -----------------------------
 
-.card{
-    border-radius: 8px;
-    box-shadow: 40px 50px 50px rgba(0, 0, 0, 0.2);
-    padding: 2rem 1.8rem ;
+.card {
+  border-radius: 8px;
+  box-shadow: 40px 50px 50px rgba(0, 0, 0, 0.2);
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  background-color: var(--card-bg);
+  background-image: var(--card-bg-image);
+  background-repeat: no-repeat;
+  background-position: 86% top;
+  color: var(--card-text);
+
+  &__header {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--card-avatar-border);
+  }
+
+  &__personalinfo {
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 1px;
+  }
 
-    &__header {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    }
+  &__name {
+    font-size: 0.8125rem;
+    font-weight: $font-weight-medium;
+  }
 
-    &__avatar {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-    }
-    &__personalinfo {
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
-    }
-     // Typography
-    &__name {
-        font-size: 0.8125rem;
-        font-weight: $font-weight-medium;
-        line-height: 1rem;
-    }
-    &__status {
-        font-size: 0.7rem;
-    }
-    &__title {
-        font-size: 1.25rem;
-        font-weight: $font-weight-medium;
-    }
-    &__message {
-        font-size: 0.8125rem;
-        width: 95%;
-    }   
-    &--purple {
-        background-color: $purple-500;
-        background-image: url(../images/bg-pattern-quotation.svg);
-        background-repeat: no-repeat;
-        background-position: 86% top;
+  &__status {
+    font-size: 0.7rem;
+  }
 
-        .card__title{
-            color: $white;
-        }
+  &__title {
+    font-size: 1.25rem;
+    font-weight: $font-weight-medium;
+    color: var(--card-title);
+  }
 
-        .card__name,
-        .card__status,
-        .card__message {
-            color: $purple-50;
-        }
-
-    }
-    &--white {
-        background-color: $white;
-        color: $grey-500;
-    }
-    &--darkgrey {
-        background-color: $grey-500;
-        color: $white;
-    }   
-    &--darkblue {
-        background-color: $dark-blue;
-        color: $white;
-    }
+  &__message {
+    font-size: 0.8125rem;
+    width: 95%;
+  }
 }
+
+
 
