@@ -15,7 +15,6 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
     - [What I learned](#what-i-learned)
     - [AI Collaboration](#ai-collaboration)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -33,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [here](https://your-solution-url.com)
+- Solution URL: [here](https://github.com/anntnt/fmc_testimonials_grid_section)
 - Live Site URL: [here](https://fmc-testimonials-grid-section.vercel.app/)
 
 ## My process
@@ -59,9 +58,3 @@ I used Microsoft Copilot, ChatGPT, and GitHub Copilot (Codex-based suggestions) 
 
 - Frontend Mentor - Ann [@anntnt](https://www.frontendmentor.io/profile/anntnt)
 
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
