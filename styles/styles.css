@@ -49,7 +49,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
 }
 
 img {
@@ -71,6 +70,7 @@ a {
   gap: 1.9rem;
   width: min(90%, 1120px);
   margin-inline: auto;
+  padding-block: 2rem;
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 600px) {
@@ -83,11 +83,42 @@ a {
   .container .card--tall {
     grid-row: span 2;
   }
+  .container .card--last {
+    grid-column: 1/span 2;
+    grid-row: 4;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container {
     grid-template-columns: repeat(4, 1fr);
+    padding-block: 4rem;
   }
+  .container .card--purple {
+    grid-column: 1/span 2;
+    grid-row: 1;
+  }
+  .container .card--darkgrey {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container .card--white:not(.card--last) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container .card--darkblue {
+    grid-column: 2/span 2;
+    grid-row: 2;
+  }
+  .container .card--last {
+    grid-column: 4;
+    grid-row: 1/span 2;
+  }
+}
+
+footer {
+  padding-bottom: 2rem;
+  text-align: center;
+  color: hsl(224, 10%, 45%);
 }
 
 .card {

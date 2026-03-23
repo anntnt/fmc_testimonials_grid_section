@@ -104,7 +104,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    justify-content: center;
+
 }
 img {
     max-width: 100%;
@@ -123,7 +123,7 @@ a {
     gap: 1.9rem;
     width: min(90%, $container-width);
     margin-inline: auto;
-
+    padding-block: 2rem;
     grid-template-columns: 1fr;
 
 
@@ -135,13 +135,55 @@ a {
 
         .card--tall {
             grid-row: span 2;
-        }        
-    }
-    @include desktop {
-        grid-template-columns: repeat(4, 1fr);
+        }    
+      // Kira (tall white card)
+      .card--last {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+      }           
     }
 
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      padding-block: 4rem;
+
+      // Daniel (purple, wide)
+      .card--purple {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+      }
+
+      // Jonathan (dark grey)
+      .card--darkgrey {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      // Jeanette (white)
+      .card--white:not(.card--last) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      // Patrick (dark blue, wide)
+      .card--darkblue {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+      }
+
+      // Kira (tall white card)
+      .card--last {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+      }
+    }
 }
+
+footer {
+    padding-bottom: 2rem;
+    text-align: center;
+    color: $grey-400;
+} 
 // -----------------------------
 // CARD COMPONENT
 // -----------------------------
